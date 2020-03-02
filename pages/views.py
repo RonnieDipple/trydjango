@@ -2,5 +2,17 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-def home_view(*args, **kwargs):
-    return HttpResponse("<hi>Hello World</h1>") #String of html
+def home_view(request, *args, **kwargs):
+    #return HttpResponse("<hi>Hello World</h1>") #String of html
+    return render(request, "home.html", {})
+
+def contact_view(request, *args, **kwargs):
+    return render(request, "contact.html", {})
+
+
+def about_view(request, *args, **kwargs):
+    return render(request, "about.html", {})
+
+def social_view(request, *args, **kwargs):
+    return HttpResponse("<hi>Social Page</h1>")
+
